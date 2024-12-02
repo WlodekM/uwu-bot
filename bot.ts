@@ -1,4 +1,5 @@
 import SoktBot from "./soktdeer/sd-bot.ts";
+import owoify from "npm:owoify-js";
 
 const creds: {
     username: string
@@ -14,6 +15,6 @@ bot.command('', {
     fn: ({ post, reply }) => {
         if (post.replies.length < 1)
             return reply('You need to reply to a post to use this command');
-        reply('uh this is not done yet')
+        reply(owoify.uvuify(post.replies[0].content));
     }
 })
