@@ -36,7 +36,7 @@ bot.command('meow', {
             case 'meow':
                 const level = db.get(`level-${post.author.username}`)
                 db.set(post.author.username, (db.get(post.author.username) ?? 0) + level);
-                reply(`You meowed, you earned ${level + 1} meow point`)
+                reply(`You meowed, you earned ${level} meow point${level == 1 ? '' : 's'}`)
                 break;
             
             case 'bal':
