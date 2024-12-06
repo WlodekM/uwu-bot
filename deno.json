@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "run": "deno run -A bot.ts > bot.log && tail -f bot.log"
+    "run": "deno run -A bot.ts > bot.log & tail -f bot.log"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1"
