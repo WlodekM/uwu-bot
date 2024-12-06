@@ -3,6 +3,8 @@ import owoify from "npm:owoify-js";
 
 import DB from "./db.ts"
 
+console.info('starting bot')
+
 const creds: {
     username: string
     password: string
@@ -80,3 +82,5 @@ Buy more levels using \`@${this.username} level buy\``);
         }
     }
 })
+
+bot.events.on('ready', () => console.info('bot ready'))
