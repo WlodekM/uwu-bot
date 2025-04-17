@@ -1,8 +1,22 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/assert@1": "1.0.8",
+    "jsr:@std/internal@^1.0.5": "1.0.5",
     "npm:@types/node@*": "22.5.4",
+    "npm:hjson@^3.2.2": "3.2.2",
     "npm:owoify-js@*": "2.0.0"
+  },
+  "jsr": {
+    "@std/assert@1.0.8": {
+      "integrity": "ebe0bd7eb488ee39686f77003992f389a06c3da1bbd8022184804852b2fa641b",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.5": {
+      "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
+    }
   },
   "npm": {
     "@types/node@22.5.4": {
@@ -10,6 +24,9 @@
       "dependencies": [
         "undici-types"
       ]
+    },
+    "hjson@3.2.2": {
+      "integrity": "sha512-MkUeB0cTIlppeSsndgESkfFD21T2nXPRaBStLtf3cAYA2bVEFdXlodZB0TukwZiobPD1Ksax5DK4RTZeaXCI3Q=="
     },
     "owoify-js@2.0.0": {
       "integrity": "sha512-fNweLqYQysAqwka7FXXbiZIa5bzRn00M8NRWaRoEvaKEp3YM6AILE9GP8opfohXfFXv/b36o6dY7joc4UixAqQ=="
@@ -21,6 +38,11 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:hjson@^3.2.2"
+      ]
+    }
   }
 }

@@ -1,3 +1,9 @@
 creds.json
 money.json
 bot.log
+node_modules
+pnpm-lock.yaml
+blockly.js
+fishing.json
+deno.lock
+inventory.json

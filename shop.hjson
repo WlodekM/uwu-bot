@@ -1,0 +1,42 @@
+items: {
+    # basic items
+    'fishing license': {
+        name: fishing license
+        description: allows you to fish
+        cost: 20
+        bonus: ['basic fishing rod']
+        type: item
+        unique: true
+    }
+    # fishing rods
+    'basic fishing rod': {
+        name: basic fishing rod
+        description: your first fishing rod
+        cost: 20
+        type: rod
+    }
+    # :fish:
+    'salmon': {
+        name: salmon (COMMON)
+        description: common fish
+        cost: 10
+        type: fish
+    }
+    'cod': {
+        name: cod (COMMON)
+        description: common fish
+        cost: 15
+        type: fish
+    }
+}
+
+shop: ['fishing license']
+sellingPrices: {
+    item: 0.75,
+    fish: 1
+}
+canSell: {
+    item: true
+    rod: false
+    fish: true
+}
